@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">FollowUpExam</string>
+    <string name="login">login</string>
+    <string name="password">password</string>
+    <string name="wrong_email">Wrong email</string>
+    <string name="wrong_password">Wrong password</string>
+    <string name="empty_email">Please put your email</string>
+    <string name="empty_password">Please put your Password</string>
+    <string name="loading_string">Loading</string>
+    <string name="login_title">Authentication</string>
+    <string name="welcome">Welcome</string>
+    <string name="press_to_start">Press to start</string>
+    <string name="Signout">LogOut</string>
+    <string name="profile">Profile</string>
+    <string name="name_string">name</string>
+    <string name="phone_number_string">Phone number</string>
+    <string name="email_string">Email</string>
+    <string name="grade_string">Grade</string>
+    <string name="last_name_string">LastName</string>
+    <string name="coefficient_string">Coefficient</string>
+    <string name="module_string">Module</string>
+    <string name="status_Loading">In progress</string>
+    <string name="recent">Recent</string>
+    <string name="most_value">Most value</string>
+    <string name="less_value">Less value</string>
+    <string name="moyenne_string">average</string>
+    <string name="default_string">Default</string>
+    <string name="error_average">Not Available</string>
+</resources>

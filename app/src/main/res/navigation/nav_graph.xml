@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/viewPagerFragment">
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.followupexam.ui.ViewPagerFragment"
+        android:label="Module list">
+        <action
+            android:id="@+id/action_viewPagerFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.followupexam.ui.ProfileFragment"
+        android:label="@string/profile">
+        <argument
+            android:name="student"
+            app:argType="com.example.followupexam.model.Student"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.followupexam.ui.ResultFragment"
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="module"
+            app:argType="com.example.followupexam.model.Module" />
+    </fragment>
+</navigation>

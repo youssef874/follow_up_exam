@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.followupexam.viewmodel.SemesterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.SemesterFragment">
+
+
+        <RadioGroup
+            android:id="@+id/filter_option"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/recent_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="@{viewModel.orderStatus.equals(viewModel.orders[1])}"
+                android:onClick="@{() -> viewModel.setOrderStatus(viewModel.orders[1])}"
+                android:text="@string/default_string" />
+
+            <RadioButton
+                android:id="@+id/most_value_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="@{viewModel.orderStatus.equals(viewModel.orders[0])}"
+                android:onClick="@{() -> viewModel.setOrderStatus(viewModel.orders[0])}"
+                android:text="@string/most_value" />
+
+            <RadioButton
+                android:id="@+id/less_value_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="@{viewModel.orderStatus.equals(viewModel.orders[2])}"
+                android:onClick="@{() -> viewModel.setOrderStatus(viewModel.orders[2])}"
+                android:text="@string/less_value" />
+        </RadioGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/filter_option"
+            app:layout_constraintStart_toStartOf="@+id/filter_option"
+            app:layout_constraintTop_toBottomOf="@+id/filter_option"
+            app:listData="@{viewModel.modulesV}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

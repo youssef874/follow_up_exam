@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="resultFragment"
+            type="com.example.followupexam.ui.ResultFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.ResultFragment">
+
+
+        <LinearLayout
+            android:id="@+id/average_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:background="#FFE57F"
+            android:orientation="vertical"
+            android:padding="@dimen/meduim_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/moyenne_string"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/average_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{resultFragment.setAverage(resultFragment.module.moyModule)}"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/average_coefficient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{resultFragment.module.coefficientModule.toString()}"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/result_one__container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:background="#FFE57F"
+            android:orientation="vertical"
+            android:padding="@dimen/meduim_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/result_one_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/result_one_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/result_one_coefficient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/result_tow_container"
+            android:layout_width="96dp"
+            android:layout_height="86dp"
+            android:background="#FFE57F"
+            android:orientation="vertical"
+            android:padding="@dimen/meduim_padding"
+            app:layout_constraintBottom_toBottomOf="@+id/result_one__container"
+            app:layout_constraintEnd_toStartOf="@+id/result_three_container"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/result_one__container"
+            app:layout_constraintTop_toTopOf="@+id/result_one__container"
+            app:layout_constraintVertical_bias="0.468">
+
+            <TextView
+                android:id="@+id/result_tow_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/result_tow_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/result_tow_coefficient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/result_three_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:background="#FFE57F"
+            android:orientation="vertical"
+            android:padding="@dimen/meduim_padding"
+            app:layout_constraintBottom_toBottomOf="@+id/result_tow_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/result_tow_container">
+
+            <TextView
+                android:id="@+id/result_three_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/result_three_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/result_three_coefficient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
